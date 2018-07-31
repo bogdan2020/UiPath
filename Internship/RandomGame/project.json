@@ -1,0 +1,14 @@
+{
+  "name": "RandomGame",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6782.18330",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
