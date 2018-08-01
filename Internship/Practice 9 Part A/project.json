@@ -1,0 +1,14 @@
+{
+  "name": "Practice 9 Part A",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6787.18199",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
