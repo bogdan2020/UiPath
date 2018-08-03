@@ -73,13 +73,7 @@
             <Sequence.Variables>
               <Variable x:TypeArguments="sd:DataTable" Name="valueTable" />
             </Sequence.Variables>
-            <ui:ExcelReadRange AddHeaders="True" DataTable="[valueTable]" DisplayName="Read Range" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" SheetName="Sheet1">
-              <ui:ExcelReadRange.Range>
-                <InArgument x:TypeArguments="x:String">
-                  <Literal x:TypeArguments="x:String" Value="" />
-                </InArgument>
-              </ui:ExcelReadRange.Range>
-            </ui:ExcelReadRange>
+            <ui:ExcelReadRange AddHeaders="True" DataTable="[valueTable]" DisplayName="Read Range" sap2010:WorkflowViewState.IdRef="ExcelReadRange_2" Range=" " SheetName="Sheet1" />
             <ui:ForEachRow DataTable="[valueTable]" DisplayName="For each row" sap2010:WorkflowViewState.IdRef="ForEachRow_2">
               <ui:ForEachRow.Body>
                 <ActivityAction x:TypeArguments="sd:DataRow">
@@ -165,7 +159,7 @@
         </ActivityAction>
       </ui:ExcelApplicationScope.Body>
     </ui:ExcelApplicationScope>
-    <sads:DebugSymbol.Symbol>d0dDOlxVc2Vyc1xCb2dkYW4uQmFyYXJcRG9jdW1lbnRzXFVpUGF0aFxJbnRlcm5zaGlwXFByYWN0aWNlIDEyXE1haW4ueGFtbCNBA6kBDgIBAUIFpwEgAgECQqABQu8BAgEqSAukARYCAQNMDVIhAgElUw2jAR0CAQRMPExKAgEoTxNPQgIBJ0yhAUypAQIBJlMmUzQCASNZE6ABHgIBBWAVZx4CAR5oFZ8BIAIBBmVHZU8CASFiSGJSAgEfahmMASQCAQuUAR2bASYCAQdrG3IkAgEacxuLASYCAQyZAU+ZAWACAQqWAVCWAVgCAQhwRXBbAgEdbUZtTgIBG3UffyoCARGHASOHAcUBAgENdiF9KgIBFn4hfsMBAgEShwE7hwFNAgEQhwGyAYcBwgECAQ+HAaQBhwGsAQIBDntLe2ICARl4THhVAgEXfjl+SwIBFX6wAX7AAQIBFH6iAX6qAQIBEw==</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0dDOlxVc2Vyc1xCb2dkYW4uQmFyYXJcRG9jdW1lbnRzXFVpUGF0aFxJbnRlcm5zaGlwXFByYWN0aWNlIDEyXE1haW4ueGFtbCNBA6MBDgIBAUIFoQEgAgECQqABQu8BAgEqSAueARYCAQNMDUy2AQIBJU0NnQEdAgEETDxMSgIBKEydAUygAQIBJ0yrAUyzAQIBJk0mTTQCASNTE5oBHgIBBVoVYR4CAR5iFZkBIAIBBl9HX08CASFcSFxSAgEfZBmGASQCAQuOAR2VASYCAQdlG2wkAgEabRuFASYCAQyTAU+TAWACAQqQAVCQAVgCAQhqRWpbAgEdZ0ZnTgIBG28feSoCARGBASOBAcUBAgENcCF3KgIBFngheMMBAgESgQE7gQFNAgEQgQGyAYEBwgECAQ+BAaQBgQGsAQIBDnVLdWICARlyTHJVAgEXeDl4SwIBFXiwAXjAAQIBFHiiAXiqAQIBEw==</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
@@ -190,7 +184,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="TryCatch_4" sap:VirtualizedContainerService.HintSize="417.6,545.6">
+      <sap2010:ViewStateData Id="TryCatch_4" sap:VirtualizedContainerService.HintSize="243.2,52.8">
         <sap:WorkflowViewStateService.ViewState>
           <scg:Dictionary x:TypeArguments="x:String, x:Object">
             <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -238,7 +232,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </sap2010:ViewStateData>
-      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="609.6,1915.2" />
+      <sap2010:ViewStateData Id="Main_1" sap:VirtualizedContainerService.HintSize="569.6,1422.4" />
     </sap2010:ViewStateManager>
   </sap2010:WorkflowViewState.ViewStateManager>
 </Activity>

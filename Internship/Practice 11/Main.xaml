@@ -66,6 +66,7 @@
     <Sequence.Variables>
       <Variable x:TypeArguments="scg:List(snm:MailMessage)" Name="emails" />
       <Variable x:TypeArguments="sd:DataTable" Name="mailRules" />
+      <Variable x:TypeArguments="snm:MailMessage" Name="mail" />
     </Sequence.Variables>
     <ui:GetOutlookMailMessages Account="{x:Null}" Filter="{x:Null}" TimeoutMS="{x:Null}" DisplayName="Get outlook mail messages" GetAttachements="False" sap2010:WorkflowViewState.IdRef="GetOutlookMailMessages_1" MailFolder="Inbox" MarkAsRead="False" Messages="[emails]" OnlyUnreadMessages="True" Top="30" />
     <ui:ReadRange AddHeaders="True" DataTable="[mailRules]" DisplayName="Read range" sap2010:WorkflowViewState.IdRef="ReadRange_1" SheetName="Sheet1" WorkbookPath="C:\Users\Bogdan.Barar\Downloads\Lesson 11 Practice 1- E-mail Rules - Resource\E-mail Rules.xlsx">
@@ -89,9 +90,6 @@
                     <DelegateInArgument x:TypeArguments="sd:DataRow" Name="row" />
                   </ActivityAction.Argument>
                   <Sequence DisplayName="Body" sap2010:WorkflowViewState.IdRef="Sequence_3">
-                    <Sequence.Variables>
-                      <Variable x:TypeArguments="snm:MailMessage" Name="mail" />
-                    </Sequence.Variables>
                     <If Condition="[mail.Sender.Address.Contains(row(&quot;Sender&quot;).ToString)]" sap2010:WorkflowViewState.IdRef="If_1">
                       <If.Then>
                         <ui:MoveOutlookMessage Account="{x:Null}" DisplayName="Move Outlook Mail Message" sap2010:WorkflowViewState.IdRef="MoveOutlookMessage_1" MailFolder="[row(&quot;Folder&quot;).ToString]" MailMessage="[mail]" />
@@ -108,7 +106,7 @@
         </ActivityAction>
       </ui:ForEach.Body>
     </ui:ForEach>
-    <sads:DebugSymbol.Symbol>d0dDOlxVc2Vyc1xCb2dkYW4uQmFyYXJcRG9jdW1lbnRzXFVpUGF0aFxJbnRlcm5zaGlwXFByYWN0aWNlIDExXE1haW4ueGFtbBZBA3AOAgEBRgVGtAICARdHBU0UAgERTgVuEgIBAkatAkaxAgIBG0aEAkaOAgIBGUbgAUbnAQIBGEcvRzwCARVKC0o6AgEUR44BR5YBAgETR6QBR4UCAgESTn9OiQECAQ9UC2sWAgEDVQ1qHQIBBFUmVTMCAQ1bE2ceAgEFXxVmGgIBBl8jX2UCAQdhGWHpAQIBCWQZZE8CAQhh3gFh5gECAQthrQFh0QECAQo=</sads:DebugSymbol.Symbol>
+    <sads:DebugSymbol.Symbol>d0dDOlxVc2Vyc1xCb2dkYW4uQmFyYXJcRG9jdW1lbnRzXFVpUGF0aFxJbnRlcm5zaGlwXFByYWN0aWNlIDExXE1haW4ueGFtbBZBA24OAgEBRwVHtAICARdIBU4UAgERTwVsEgIBAketAkexAgIBG0eEAkeOAgIBGUfgAUfnAQIBGEgvSDwCARVLC0s6AgEUSI4BSJYBAgETSKQBSIUCAgEST39PiQECAQ9VC2kWAgEDVg1oHQIBBFYmVjMCAQ1cE2UeAgEFXRVkGgIBBl0jXWUCAQdfGV/pAQIBCWIZYk8CAQhf3gFf5gECAQtfrQFf0QECAQo=</sads:DebugSymbol.Symbol>
   </Sequence>
   <sap2010:WorkflowViewState.ViewStateManager>
     <sap2010:ViewStateManager>
