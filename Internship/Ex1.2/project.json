@@ -1,0 +1,14 @@
+{
+  "name": "Ex1 ....try 2",
+  "description": "Blank Project",
+  "main": "Main.xaml",
+  "dependencies": {},
+  "excludedData": [
+    "Private:*",
+    "*password*"
+  ],
+  "toolVersion": "18.2",
+  "projectVersion": "1.0.6796.16101",
+  "packOptions": {},
+  "runtimeOptions": {}
+}
